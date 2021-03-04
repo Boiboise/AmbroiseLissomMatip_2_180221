@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url(Police/Raleway-Italic-VariableFont_wght.ttf);
+    src: url(Police/Raleway-VariableFont_wght.ttf);
+}
+
+body /*inheritance*/
+{
+    background-color: white; /*configuration du background par defaut du site*/
+    font-family: 'Raleway', Arial, Helvetica, sans-serif; /*appilcation de la police et de la police par défaut*/
+    font-size: medium;
+    font-style:normal;
+    text-align: left;/* toutes les justifications sont sur la gauche*/
+    word-wrap: break-word;/* faire que le texte revienne a la ligne*/
+    margin-left:3.45%;
+    margin-right:3.34%;
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows: 0.05fr 0.1fr 2fr 1fr 0.1fr; /* revoir les dimensions*/
+    grid-gap:3.23%;
+    grid-template-areas: /*setup tempalte*/
+    "header header"
+    "filtres filtres"
+    "hebergement populaire"
+    "activite activite"
+    "footer footer"
+    
+}
+/*---------------------------------------------------------header setting------------------------------------------------------------------------*/
+.header
+{
+    grid-area:header;
+    grid-column-end: 13;
+    display:flex;
+    background-color: #aaaa;
+    border: 3px black solid;
+    justify-content: space-between;
+    grid-row-start: 1;
+   
+}
+#logo
+{
+    width: 5%; /*valeur fixe ou tout du moins mettre un minimum de largeur*/
+    min-width: 16px;
+}
+
+/*-------------------------------------------------------------Main : Menu --------------------------------------------------------------------*/
+
+.filtres
+{
+    grid-area: filtres;
+    grid-column-end: 13;
+    
+    border: 3px black solid;   
+}
+
+#filtre
+{
+    border-radius: 10px;
+    border: 3px black solid;
+    /*definition css des bouton filtre*/
+}
+
+/* MAIN ----------------------------------------Setup card for "hébergement", "activité", "populaire"--------------------------------------------*/
+
+/*common elements*/
+h2, em, .Pbold /*ajustement identique sur toutes les sections*/
+{
+ 
+    font-weight: bold;
+}
+h3, p
+{
+    
+    font-size: 1em;
+}
+.card__stars
+{
+  /* Le groupe '.stars' positionne les étoiles les unes à côté des autres sans espacements. */
+    display: inline-flex;
+    font-size: 1em;
+    border: 1px black solid;
+}
+
+.fa-star/* Par défaut, une étoile est en gris, avec un padding et un curseur en forme de main. */
+{
+    color:#f2f2f2;
+    padding: 0.0625rem;
+}
+.fa-star.blue/* Si elle porte en plus la classe '.gold', elle sera en jaune. */
+{
+    color: #0065fc;
+}
+img
+{
+    max-width: 100%;
+    max-height: 100%;
+    /*border-radius: 10px 10px 0 0;*/
+    display: block;
+}
+
+
+/*----------------------------------------------------"Hebergement card setting"------------------------------------------------------------------*/
+
+.hebergement
+{
+    grid-area: hebergement;
+    grid-column:1/span 8;
+    background-color: #f2f2f2;
+    padding:5%;
+    border-radius: 10px;
+    border: 1px #f2f2f2 solid;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-gap:3%;
+   
+}
+
+.card1 /*hebergement*/
+{
+    display:flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow:2px 2px 6px rgb(206, 204, 204) ;
+    border: 1px #ffffff solid;
+    padding:3.25% 3.25% 3.25% 3.25%;
+    cursor: pointer;
+}
+.card1__thumb /*mise en forme image card hebergement*/
+{
+    width: auto;        
+    border-radius: 10px 10px 0 0;
+    border: 1px black solid;     /*#fffff - attention le div doit etre dimansionné*/
+}
+
+ /*---------------------------------------------------------"Populaire" card setting"--------------------------------------------------------------*/
+
+.populaire
+{
+    grid-area: populaire;
+    grid-column:9/span 4;
+    background-color: #f2f2f2;
+    padding:5%;
+    border-radius: 10px;
+    border: 1px #f2f2f2 solid;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(4,1fr);
+    grid-gap:3%;
+}
+
+ .card2
+  {
+    display:flex;
+     /*CSS setup card "populaire" use media queries*/
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow:2px 2px 6px rgb(206, 204, 204) ;
+    border: 1px #ffffff solid;
+    padding:3.25% 3.25% 3.25% 3.25%;
+    cursor: pointer;
+  }
+  .card2__thumb /*mise en forme image card hebergement*/
+  {
+    width: auto;   
+    border: 1px black solid;     /*#fffff - attention le div doit etre dimansionné*/
+    border-radius: 10px 00px 0 10px; 
+  }
+
+   /*--------------------------------------------------------"Actitivé" card setting -------------------------------------------------------------*/
+
+   .activite
+{
+    grid-area: activite;
+    grid-column-end: 13;
+    background-color:white;
+    border: 3px black solid;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap:3%;
+}
+ .card3 
+ {
+   /*CSS setup card "activités" use media queries*/
+   background-color: #ffffff;
+   border-radius: 10px;
+   box-shadow:2px 2px 6px rgb(206, 204, 204) ;
+   border: 1px #ffffff solid;
+   padding:3.25% 3.25% 3.25% 3.25%;
+   cursor: pointer;
+ }
+ .card3__thumb /*mise en forme image card hebergement*/
+ {
+   width: auto;   
+   border: 1px black solid;     /*#fffff - attention le div doit etre dimansionné*/
+   border-radius: 10px 00px 0 10px; 
+ }
+
+
+
+/*---------------------------------------------------------------footer elements ---------------------------------------------------------------*/
+.footer
+{
+    grid-area:footer;
+    grid-column-end: 13;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: #aaaa;
+    border: 3px black solid;
+}
+
+
+  
+ 
+  
