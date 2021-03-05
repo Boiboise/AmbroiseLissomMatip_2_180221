@@ -20,15 +20,16 @@
             <img id="logo" src="images/logo/Reservia@3x.png" alt="Reservia_reservation_hebergement_logo">
             <nav>
                  <ul>
-                    <li><a href="#hebergement">hébergement</a></li>
-                    <li><a href="#activite">Activité</a></li>
-                    <li><a href="#">S'inscrire</a></li>
+                    <li><a href="#hebergement" title="">hébergement</a></li>
+                    <li><a href="#activite" title="">Activité</a></li>
+                    <li><a href="#" title="">S'inscrire</a></li>
                 </ul>
             </nav>
         </header>
         
         <section class="filtres">
-            <h1 class="Titre">Trouvez votre <strong>hébergement</strong> pour des vacances de reve En plein <strong>centre ville</strong> ou en <strong>pleine nature</strong></h1>
+            <h1 class="Titre">Trouvez votre hébergement pour des vacances de reve</br>
+                <span class="titre"> En plein centre ville ou en pleine nature</span></h1>
             <form action="index.html">
                 <div class="location">
                     <i class="fas fa-map-marker-alt"></i>
@@ -43,11 +44,16 @@
                     </div>
                     <p class=filtre__menu>Economique</p>
                 </div>
-                <a href="#">Familial</a>
-                <a href="#">Romantique</a>
-                <a href="#">Animaux autorisés</a>
+                <a href="#">Familial</a> <!--<i class="fas fa-child"></i> -->                
+                <a href="#">Romantique</a><!--<i class="fas fa-heart"></i>-->
+                <a href="#">Animaux autorisés</a> <!--<i class="fas fa-dog"></i>-->
                 <!-- Not JS only css effect - Not linked to a page see if Href tag is relevant here-->
-                <p>Plus de  logements sont disponibles dans cette visite</p> <!-- Need a picto-->
+            </div>
+            <div class="information">
+                <div class="informatio__fa">
+                    <i class="fas fa-info"></i>
+                </div>
+                <p >Plus de  logements sont disponibles dans cette visite</p> <!-- le 500 viens pobablement du site -->
             </div>
         </section>
             
@@ -55,7 +61,7 @@
             <h2 id="hebergement">Hébergement à Marseille</h2>
             <article class="card1"> <!--Definition de la carte parent de la section hénergement-->
                 <div class="card1__thumb"> <!--intégration de l'imag en thumb et différent si cliqué /intégrer dans un div pour contenir l'image-->
-                    <a href="images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg"><img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" 
+                    <a href="images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg"><img class="card1__thumb__img" src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" 
                         alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                </div>
                 <h3>Auberge de la Cannebière </h3> <!--Titre de l'article en H3 pour le SEO-->
@@ -70,7 +76,7 @@
             </article>
             <article class="card1">
                 <div class="card1__thumb"> 
-                    <a href="images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg"><img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" 
+                    <a href="images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg"><img class="card1__thumb__img" src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" 
                         alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                </div>
                 <h3>Hôtel du port</h3>
@@ -85,7 +91,7 @@
             </article>
             <article class="card1">
                 <div class="card1__thumb"> 
-                    <a href="images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg"><img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" 
+                    <a href="images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg"><img class="card1__thumb__img" src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" 
                         alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                </div>
                 <h3>Hôtel les mouettes</h3>
@@ -100,7 +106,7 @@
             </article>
             <article class="card1">
                 <div class="card1__thumb"> 
-                    <a href="images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg"><img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" 
+                    <a href="images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg"><img class="card1__thumb__img" src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" 
                         alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                </div>
                 <h3>Hôtel de la mer</h3>
@@ -115,7 +121,7 @@
             </article>
             <article class="card1">
                 <div class="card1__thumb">
-                    <a href="images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"><img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" 
+                    <a href="images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"><img class="card1__thumb__img" src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" 
                         alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                 </div>
                 <h3>Auberge Le Panier</h3> 
@@ -130,7 +136,7 @@
             </article>
             <article class="card1">
                 <div class="card1__thumb"> 
-                    <a href="images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"><img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" 
+                    <a href="images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"><img class="card1__thumb__img" src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" 
                         alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                </div>
                <h3>Hôtel chez Amina</h3> 
@@ -145,11 +151,11 @@
             </article>
             afficher plus
         </section>
-        <section class="populaire"> 
+        <section class="populaire"> <!--<i class="fas fa-chart-line"></i>-->
             <h2 id="activite">Les plus populaire</h2>            
             <article class="card2">
                 <div class="card2__thumb"> 
-                    <a href="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"><img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" 
+                    <a href="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"><img class="card2__thumb__img" src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" 
                         alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                 </div>
                 <div>
@@ -166,7 +172,7 @@
             </article>
             <article class="card2">
                 <div class="card2__thumb"> 
-                    <a href="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg"><img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
+                    <a href="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg"><img class="card2__thumb__img"  src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
                         alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                 </div>
                 <div>
@@ -183,7 +189,7 @@
             </article>
             <article class="card2">
                 <div class="card2__thumb"> 
-                    <a href="images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg"><img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
+                    <a href="images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg"><img class="card2__thumb__img"  src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
                         alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                 </div>
                 <div>
@@ -200,7 +206,7 @@
             </article>
         </section>
             
-        <section class="activite">
+        <section class="activite"> <!-- aside? ne représente pas vraiment la mission du site-->
             <h2>Activités à Marseille</h2>
             <article class="card3">
                 <div class="card3__thumb"> 

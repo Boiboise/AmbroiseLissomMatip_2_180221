@@ -1,3 +1,10 @@
+*, *::before,*::after
+{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'Raleway';
     src: url(Police/Raleway-Italic-VariableFont_wght.ttf);
@@ -8,12 +15,13 @@ body /*inheritance*/
 {
     background-color: white; /*configuration du background par defaut du site*/
     font-family: 'Raleway', Arial, Helvetica, sans-serif; /*appilcation de la police et de la police par défaut*/
-    font-size: medium;
+    font-size: 1rem;
     font-style:normal;
     text-align: left;/* toutes les justifications sont sur la gauche*/
     word-wrap: break-word;/* faire que le texte revienne a la ligne*/
     margin-left:3.45%;
     margin-right:3.34%;
+    line-height:1.5rem;
     display:grid;
     grid-template-columns:repeat(12,1fr);
     grid-template-rows: 0.05fr 0.1fr 2fr 1fr 0.1fr; /* revoir les dimensions*/
@@ -25,6 +33,11 @@ body /*inheritance*/
     "activite activite"
     "footer footer"
     
+}
+.titre
+{
+    font-weight:normal;
+    font-size:1rem;
 }
 /*---------------------------------------------------------header setting------------------------------------------------------------------------*/
 .header
@@ -78,9 +91,10 @@ form
 }
 .search
 {
-  border-color: #ffffff;
   font-size:0.75rem;
   padding-left: 3%;
+  font-weight: bold;
+  border:none;
 
 }
 .submit
@@ -88,7 +102,8 @@ form
   
   border-radius: 0px 8px 8px 0px;
   background-color: #0065fc;
-  border-color: #0065fc;
+  
+  border:none;
   color: #ffffff;
   font-size:0.75rem;
   
@@ -146,13 +161,13 @@ h2, em, .Pbold /*ajustement identique sur toutes les sections*/
 h3, p
 {
     
-    font-size: 1em;
+    font-size: 1rem;
 }
 .card__stars
 {
   /* Le groupe '.stars' positionne les étoiles les unes à côté des autres sans espacements. */
     display: inline-flex;
-    font-size: 1em;
+    font-size: 1rem;
     border: 1px black solid;
 }
 
@@ -180,6 +195,8 @@ img
 {
     grid-area: hebergement;
     grid-column:1/span 8;
+    /*width: 55rem;*/
+    height:38rem;
     background-color: #f2f2f2;
     padding:5%;
     border-radius: 10px;
@@ -196,19 +213,30 @@ img
     display:flex;
     flex-direction: column;
     background-color: #ffffff;
+    width: 15.5rem;
+    height:12.4rem;
     border-radius: 10px;
     box-shadow:2px 2px 6px rgb(206, 204, 204) ;
     border: 1px #ffffff solid;
     padding:3.25% 3.25% 3.25% 3.25%;
     cursor: pointer;
+    width: 10rem;
+    height:10rem;
+    box-sizing: border-box;
 }
 .card1__thumb /*mise en forme image card hebergement*/
 {
-    width: auto;        
+    width:8rem ;
+    height: 5rem;       
     border-radius: 10px 10px 0 0;
-    border: 1px black solid;     /*#fffff - attention le div doit etre dimansionné*/
+    
 }
-
+.card1__thumb__img
+{
+    width:8rem ;
+    height: 5rem;       
+    border-radius: 10px 10px 0 0;
+}
  /*---------------------------------------------------------"Populaire" card setting"--------------------------------------------------------------*/
 
 .populaire
@@ -216,6 +244,7 @@ img
     grid-area: populaire;
     grid-column:9/span 4;
     background-color: #f2f2f2;
+    height:38rem;
     padding:5%;
     border-radius: 10px;
     border: 1px #f2f2f2 solid;
@@ -230,17 +259,27 @@ img
     display:flex;
      /*CSS setup card "populaire" use media queries*/
     background-color: #ffffff;
+    width: 21.3rem;
+    height:8.9rem;
     border-radius: 10px;
     box-shadow:2px 2px 6px rgb(206, 204, 204) ;
     border: 1px #ffffff solid;
     padding:3.25% 3.25% 3.25% 3.25%;
     cursor: pointer;
+    align-items: flex-start;
+    justify-content: center;
   }
   .card2__thumb /*mise en forme image card hebergement*/
   {
-    width: auto;   
-    border: 1px black solid;     /*#fffff - attention le div doit etre dimansionné*/
+    width:7.9rem ;
+    height: 8.4rem;   
     border-radius: 10px 00px 0 10px; 
+  }
+  .card2__thumb__img
+  {
+    width:7.9rem ;
+    height: 8.4rem;   
+    border-radius: 10px 0px 0 10px; 
   }
 
    /*--------------------------------------------------------"Actitivé" card setting -------------------------------------------------------------*/
@@ -283,7 +322,7 @@ img
     display:grid;
     grid-template-columns: repeat(3,1fr);
     background-color: #aaaa;
-    border: 3px black solid;
+    
 }
 
 
