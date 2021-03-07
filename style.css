@@ -5,7 +5,6 @@ body /*inheritance*/
     font-family: 'Raleway', Arial, Helvetica, sans-serif; /*appilcation de la police et de la police par défaut*/
     font-size: 1rem;
     font-style:normal;
-    text-align: left;/* toutes les justifications sont sur la gauche*/
     word-wrap: break-word;/* faire que le texte revienne a la ligne*/
     display:grid;
     margin:0;
@@ -140,21 +139,25 @@ form
 .recherche__filtre
 {
   
-  display: flex; /* attention mettre le flex pour ajuster les dimension au contenu du contenaire*/
-  border: 1px black solid;
-  justify-content:space-around;
+  display:flex; /* attention mettre le flex pour ajuster les dimension au contenu du contenaire*/
+  flex-wrap:wrap;
   align-items: center;
   font-weight: bold;
   font-size:1rem;
-
+  margin:1rem 0 1rem 0;
+  
+}
+.recherche__filtre div
+{
+  margin-right:1rem;
 }
 .recherche__filtre__contenaire
 {
   display:flex;
-  border: 1px black solid;
-  align-items:  stretch; /* etire sur toute la hauteur voir les cartes également*/
+  border: 1px #f2f2f2 solid;
   border-radius:10rem;
   cursor: pointer;
+  flex-wrap:nowrap;
 
 }
 .recherche__filtre__contenaire:hover
@@ -166,18 +169,43 @@ form
   
   background-color: #deebff;  
   text-align: center;
-  padding:0 0.5rem 0 0.5rem;
+  padding:0.5rem;
+  width: 1.5rem;
+  height:1.5rem;
   border-radius: 50%;
   display: flex;
   align-items:center;
+  justify-content:center;
+  
+  
 }
 
 .recherche__filtre__text
 {
-  padding:0.5rem;
+  padding:0.5rem 1rem 0.5rem 0 ;
+  align-self:center;
+  
 }
-
-
+/************comment **********************/
+.information
+{
+  margin:1rem 0 1rem 0;
+  display:flex;
+  align-items: center;
+  
+}
+.information__fa
+{
+  border:1px black solid;
+  /*font-weight: lighter;*/
+  margin-right:1rem;
+  border-radius: 50%;
+  width:1.5rem;
+  height:1.5rem;
+  font-size:0.75rem;
+  text-align: center;
+  
+}
 /* MAIN ----------------------------------------Setup card for "hébergement", "activité", "populaire"--------------------------------------------*/
 
 /*common elements*/
