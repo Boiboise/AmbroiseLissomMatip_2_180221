@@ -20,11 +20,9 @@
                 <img id="header__Logo__reservia" src="images/logo/Reservia@3x.png" alt="Reservia_reservation_hebergement_logo">
             </p>
             <nav class="header__menu">
-                 <ul class="header__menu__list">
-                    <li class="header__menu__list__hoover"><a href="#hebergement" title="Hébergement">hébergement</a></li>
-                    <li><a href="#activite" title="Activités">Activité</a></li>
-                    <li><a href="#" title="S'inscrire">S'inscrire</a></li>
-                </ul>
+                   <div class="header__menu__list__hoover"><a href="#hebergement"  title="Hébergement">hébergement</a></div> 
+                   <div class="header__menu__list__hoover"><a href="#activite" title="Activités">Activité</a></div> 
+                   <div><a href="#" title="S'inscrire">S'inscrire</a>         </div>        
             </nav>
         </header>
         
@@ -82,7 +80,7 @@
                             alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                 </div>
                     <h3>Auberge de la Cannebière </h3> <!--Titre de l'article en H3 pour le SEO-->
-                    <p>Nuit à partir de <em>25€</em></p>  <!--Paragraphe avec intégration de la balise em (ou autre de moindre importance) pour la mise en gras-->
+                    <p class="card_p">Nuit à partir de <em>25€</em></p>  <!--Paragraphe avec intégration de la balise em (ou autre de moindre importance) pour la mise en gras-->
                     <div class="card__stars"> <!--Intégration des étoiles block parent pour uiliser le display inline-flex il s'agit d'une option code car sans retour serveur-->
                         <i class="fas fa-star blue"></i><!--etoile bleu-->
                         <i class="fas fa-star blue"></i>
@@ -97,7 +95,7 @@
                             alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                 </div>
                     <h3>Hôtel du port</h3>
-                    <p>Nuit à partir de 52<em>€</em></p>  
+                    <p class="card_p">Nuit à partir de 52<em>€</em></p>  
                     <div class="card__stars"> 
                         <i class="fas fa-star blue"></i>
                         <i class="fas fa-star blue"></i>
@@ -112,7 +110,7 @@
                             alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                 </div>
                     <h3>Hôtel les mouettes</h3>
-                    <p>Nuit à partir de 76<em>€</em></p>  
+                    <p class="card_p">Nuit à partir de 76<em>€</em></p>  
                     <div class="card__stars"> 
                         <i class="fas fa-star blue"></i>
                         <i class="fas fa-star blue"></i>
@@ -127,7 +125,7 @@
                             alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                 </div>
                     <h3>Hôtel de la mer</h3>
-                    <p>Nuit à partir de 46<em>€</em></p>  
+                    <p class="card_p">Nuit à partir de 46<em>€</em></p>  
                     <div class="card__stars">
                         <i class="fas fa-star blue"></i>
                         <i class="fas fa-star blue"></i>
@@ -142,7 +140,7 @@
                             alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                     </div>
                     <h3>Auberge Le Panier</h3> 
-                    <p>Nuit à partir de 23<em>€</em><p>  
+                    <p class="card_p">Nuit à partir de 23<em>€</em></p>  
                     <div class="card__stars"> 
                         <i class="fas fa-star blue"></i>
                         <i class="fas fa-star blue"></i>
@@ -157,7 +155,7 @@
                             alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /></a>
                 </div>
                 <h3>Hôtel chez Amina</h3> 
-                    <p>Nuit à partir de 96<em>€</em></p> 
+                    <p class="card_p">Nuit à partir de 96<em>€</em></p> 
                     <div class="card__stars"> 
                         <i class="fas fa-star blue"></i>
                         <i class="fas fa-star blue"></i>
@@ -182,7 +180,7 @@
                     </div>
                     <div>
                         <h3>hôtel le soleil du matin</h3>
-                        <p>Nuit à partir de 96<em>€</em></p> 
+                        <p class="card_p">Nuit à partir de 96<em>€</em></p> 
                         <div class="card__stars"> 
                             <i class="fas fa-star blue"></i>
                             <i class="fas fa-star blue"></i>
@@ -199,7 +197,7 @@
                     </div>
                     <div>
                         <h3>Au coeur de l'eau Chambre d'hôtes</h3>
-                        <p>Nuit à partir de 96<em>€</em></p>
+                        <p class="card_p">Nuit à partir de 96<em>€</em></p>
                         <div class="card__stars"> 
                             <i class="fas fa-star blue"></i>
                             <i class="fas fa-star blue"></i>
@@ -216,7 +214,7 @@
                     </div>
                     <div>
                         <h3>hotel Tout bleu et Blanc</h3>
-                        <p>Nuit à partir de 96<em>€</em></p> 
+                        <p class="card_p">Nuit à partir de 96<em>€</em></p> 
                         <div class="card__stars">
                             <i class="fas fa-star blue"></i>
                             <i class="fas fa-star blue"></i>
@@ -230,7 +228,7 @@
         </section>
             
         <section class="activite"> <!-- aside? ne représente pas vraiment la mission du site-->
-            <h2>Activités à Marseille</h2>
+            <h2 id="activite">Activités à Marseille</h2>
             <article class="card3">
                 <div class="card3__thumb"> 
                     <a href="images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"><img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" 
