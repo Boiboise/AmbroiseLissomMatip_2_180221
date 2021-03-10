@@ -1,503 +1,829 @@
 
 body /*inheritance*/
 {
-    background-color: white; /*configuration du background par defaut du site*/
+    
     font-family: 'Raleway', Arial, Helvetica, sans-serif; /*appilcation de la police et de la police par défaut*/
-    font-size: 1rem;
-    font-style:normal;
     word-wrap: break-word;/* faire que le texte revienne a la ligne*/
-    display:grid;
     margin:0;
+    font-size:0.75rem;
+   display:grid;
     grid-template-columns:1fr;
     grid-template-rows:0.1fr 03.fr 1fr 0.5fr 0.2fr; /* revoir les dimensions*/
-    grid-template-areas: /*setup tempalte*/
-    "header header"
+   grid-template-areas: /*setup tempalte*/
+   "header header"
     "filtres filtres"
     "global_hebergement global_hebergement"
     "activite activite"
     "footer footer"
     
+    
 }
-ul{
-  list-style-type: none;
-  padding: 0;
-  margin:0;
-  
-}
-.recherche__titre__span
-{
-    font-weight:normal;
-    font-size:1rem;
-}
+
+
 a:link , a:visited
 { 
  text-decoration:none; 
  color:#000;
 } 
-.fas
+
+
+p
 {
-   color:#0065fc;
+    margin:0;
 }
 /*---------------------------------------------------------header setting------------------------------------------------------------------------*/
-.header
-{
-    grid-area:header;
-    display:grid;
-    grid-template-columns:repeat(9,1fr);
-    grid-gap:2rem;
-    justify-content: center;
-    align-items: center;
-    /*border:1px solid black;*/
-    padding:2rem 2rem 0 2rem ;
-    /*margin:0;*/
-       
-}
-.header__Logo
-{
-  grid-column-start: 1;
-  /*border:1px solid black;*/
-}
-#header__Logo__reservia
-{
-    width: 1fr; /*valeur fixe ou tout du moins mettre un minimum de largeur*/
-    min-width: 16px;
-}
-.header__menu
-{
-  grid-column:7/span 3;
-  justify-content: space-around;
-  justify-items:center;
-  display:flex;
-  
-  /*border:1px solid black;*/
-}
-.header__menu__list
-{
-  display:flex;
-  justify-content: space-around;
-  color:#f2f2f2;
-  /*border:1px solid black;*/
-  
-}
-.header__menu__list__hoover:hover
-{
-border-top:1px solid blue;
-color:blue;
-}
-/*-------------------------------------------------------------Main : Menu --------------------------------------------------------------------*/
-/* search tool*/
-.recherche
-{
-    grid-area: filtres;
-    padding:0 2rem 2rem 2rem; 
-       
-}
-/***************************search**************************************************/
-form
-{
-    display: inline-flex; /*ajuste la taile de la div au dimension du conteneur*/
-    border-radius: 10px;
-    border: 1px #f2f2f2 solid;
-    height: 2rem; 
-    margin-bottom: 1rem;
-   
-}
-.recherche__location
-{
-    background-color:#f2f2f2;
-    border-radius: 8px 00px 00px 8px;
-    border: 1px #f2f2f2 solid;
-    width:2.5rem;
-    height: 1.8rem;    
-    text-align: center;
-    padding-top:0.1rem;
+  .header
+  {
+      grid-area:header;
+      margin:2rem 3.2rem 0 3.2rem;
+      
+  }
+    .header__menu
+    {
+      display:grid;
+      grid-template-columns:repeat(9,1fr);
+      grid-gap:1rem;
+      align-items:center;
+      justify-items:end;
+      padding:0 2rem 0 0rem ;
     
-}
-.fa-map-marker-alt
+    }
+      .header__menu :nth-child(1)
+      {
+        grid-column-start: 1;
+       justify-self: start;
+        
+        
+      }
+        
+    .header__menu :nth-child(2)
+      {
+        grid-column-start: 7;
+       
+        
+      }
+
+    .header__menu :nth-child(3)
+      {
+        grid-column-start: 8;
+        
+        
+      }       
+
+    .header__menu :nth-child(4)
+      {
+        grid-column-start: 9;
+        color:blue;
+        font-weight: bold;
+        
+        
+       
+      }
+
+      #header__Logo__reservia
+      {
+          min-width: 5rem; /*valeur fixe ou tout du moins mettre un minimum de largeur*/
+          
+        }
+      .header__menu__list__hoover:hover
+      {
+      border-top:1px solid blue;
+      color:blue;
+      }
+
+
+/*-------------------------------------------------------------Main : Menu --------------------------------------------------------------------*/
+/* secondary nav setting*/
+    .recherche
+    {
+        grid-area:filtres;
+        margin:0rem 3.2rem 2rem 3.2rem;
+    }
+    /* h1 setting : bold + normal*/
+
+        h1{margin-bottom:1rem;}
+            .recherche span
+            {
+                font-weight: normal;
+                font-size:0.75rem;
+                
+            }
+        /*searche enging implementation*/
+        form
+            {
+                display: inline-flex; /*ajuste la taile de la div au dimension du conteneur*/
+                border-radius: 10px;
+                border: 1px #f2f2f2 solid;
+                height: 2rem; 
+                /*margin-bottom:0.25rem;*/
+                font-size:1rem;
+            
+            }
+            .recherche__location
+            {
+                background-color:#f2f2f2;
+                border-radius: 8px 00px 00px 8px;
+                border: 1px #f2f2f2 solid;
+                width:2.2rem;
+                text-align: center;
+                padding-top:0.1rem;
+                
+            }
+            .fa-map-marker-alt
+            {
+            font-size:0.75rem;
+            color:black
+            
+            }
+            .search
+            {
+            
+            padding-left: 1rem;
+            font-weight: bold;
+            border:none;
+
+            }
+            .submit
+            {
+            
+            border-radius: 0px 8px 8px 0px;
+            background-color: #0065fc;
+            border:none;
+            color: #ffffff;
+            font-weight: bold;
+            width: 6rem;
+            
+            
+            }
+
+/* filters tool*/
+        .recherche__filtre
+        {
+        
+        display:flex; /* attention mettre le flex pour ajuster les dimension au contenu du contenaire*/
+        flex-wrap:wrap;
+        justify-items:start;
+        align-items: center;
+        font-weight: bold;
+        /*font-size:1rem;*/
+        margin:1rem 0 2rem 0;
+        align-content: center;
+        
+        }
+            #filtrediv
+            {
+                margin-right: 1rem;
+            }
+                .recherche__filtre__contenaire
+                {
+                display:flex;
+                border-top: 2px  #f2f2f2 solid;
+                border-right: 2px #f2f2f2 solid;
+                border-bottom: 2px  #f2f2f2 solid;
+                border-radius:10rem;
+                cursor: pointer;
+                flex-wrap:nowrap;
+                margin:0 1rem 0.5rem 0;
+                white-space: nowrap; /*for "animal autorisé" no break word*/
+                
+
+                }
+                .recherche__filtre__contenaire:hover
+                {
+                background-color: #deebff;
+                box-shadow: 2px 2px 2px rgba(0,101,252,2);
+                }
+                .recherche__filtre__fas
+                {
+                
+                background-color: #deebff;  
+                text-align: center;
+                padding:0.5rem;
+                width: 1rem;
+                height:1rem;
+                border-radius: 50%;
+                display: flex;
+                align-items:center;
+                justify-content:center;
+                
+                
+                }
+                .recherche__filtre__fas .fas{color:#0065fc}
+
+                .recherche__filtre__text
+                {
+                padding:0.5rem 0.75rem 0.25rem 0.5rem ;
+                align-self:center;
+                margin:0;
+                
+                }
+        /************comment **********************/
+        .information
+        {
+        
+        display:flex;
+        align-items: center;
+        
+        }
+            .information__fa /* achever le cadréaged e l'icon et sa taille*/
+            {
+            border:1px #deebff solid;
+            margin-right:1rem;
+            border-radius: 50%;
+            width:1rem;
+            height:1rem;
+            /*font-weight: bold;*/
+            color:#0065fc;
+            font-size:0.7rem;
+            text-align:center;
+            /*padding:0.125rem*/
+            /*align-self:flex-start;*/
+            /*font-size:0.5rem;*/
+            }
+/* MAIN ----------------------------------------Setup card for "hébergement", "activité", "populaire"--------------------------------------------*/
+
+/*common elements*/
+    .global_hebergement
+    {
+        grid-area:global_hebergement;
+        display:grid;
+        grid-template-columns:7fr 3fr;
+        
+        grid-gap:2.5rem;/*ajusté*/
+        padding-left:3.2rem;/*ajusté*/
+        padding-right:3.2rem;/*ajusté*/
+        margin-bottom: 3rem;
+    }
+    h2, em, .Pbold /*ajustement identique sur toutes les sections*/
+    {
+    
+        font-weight: bold;
+        margin:0;
+        padding:0;
+    }  
+
+    article h3/*ajusté*/
+    {
+       
+        margin:0;
+    }
+
+    .global_hebergement p/*ajusté*/
+    {
+        margin-bottom:0.4rem ;
+        margin-top:0.4rem;
+    }
+
+
+    .card__stars/*ajusté*/
+    {
+    /* Le groupe '.stars' positionne les étoiles les unes à côté des autres sans espacements. */
+        display: flex; 
+       
+   }
+
+    .fa-star/* Par défaut, une étoile est en gris, avec un padding et un curseur en forme de main. *//*ajusté*/
+    {
+        color:#f2f2f2;
+        /*padding: 0.0625rem;*/
+    }
+    .fa-star.blue/* Si elle porte en plus la classe '.gold', elle sera en jaune. *//*ajusté*/
+    {
+        color: rgb(0, 101, 252);
+    }
+    img
+    {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+    }
+
+
+/*----------------------------------------------------"Hebergement card setting"------------------------------------------------------------------*/
+
+        .hebergement
+        {
+            grid-column-start: 1;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            border: 1px #f2f2f2 solid;
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            padding:2.5rem;
+            grid-gap:2rem;
+        
+        }
+            .hebergement h2
+            {
+            grid-row-start: 1;
+            grid-column: 1/4;
+            }
+            #afficher
+            {
+                font-weight: bold;
+                margin:0;
+            }
+            .card1 /*hebergement*/
+            {
+                display:flex;
+                flex-direction: column;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow:2px 2px 6px rgb(206, 204, 204) ;
+                border: 1px #ffffff solid;
+                padding:0.4rem;/*ajusté*/
+                cursor: pointer;
+                                
+                
+            }
+                .card1__thumb /*mise en forme image card hebergement*/
+                {
+                
+                    height: 6rem;       
+                    border-radius: 10px 10px 0 0;/*ajusté*/
+                    padding-bottom: 0.4rem;/*ajusté*/
+                    
+                }
+                    .card1__thumb__img
+                    {
+                        width:100% ; 
+                        border-radius: 10px 10px 0 0;
+                    }
+ /*---------------------------------------------------------"Populaire" card setting"--------------------------------------------------------------*/
+
+        .populaire
+        {
+            
+        grid-column-start: 2;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        border: 1px #f2f2f2 solid;
+        display:grid;
+        padding:2.5rem;
+        grid-gap:2rem;
+                
+        }
+            .trend
+            {
+           /* grid-row-start: 1;*/
+            display:flex;
+            justify-content: space-between;
+            
+            }
+                .trend_fa
+                {
+                align-self: baseline;
+                color: black;
+                
+
+                }
+                    .fa-chart-line
+                    {
+                    color: black;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    }
+            .card2
+            {
+            display:flex;            
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow:2px 2px 6px rgb(206, 204, 204) ;
+            padding:0.4rem;
+            cursor: pointer;
+
+            }
+                .card2 h3
+                {
+                    margin-top:0.4rem;
+                }
+                .card2__thumb /*mise en forme image card hebergement*/
+                {
+                
+                border-radius: 10px 00px 0 10px;
+                padding-right: 0.8rem;/*ajusté*/
+                }
+                    .card2__thumb__img
+                    {
+                    width:6rem;
+                    height:100%;
+                    border-radius: 10px 0px 0 10px; 
+                    }
+                .card2 .card__stars
+                {
+                    margin-top:2rem;
+                    margin-bottom:0.8rem;
+                }
+    
+        /*--------------------------------------------------------"Actitivé" card setting -------------------------------------------------------------*/
+
+   .activite
+   {
+       grid-area: activite;
+       display:grid;
+       grid-template-columns:repeat(4,1fr);
+       grid-template-rows: 1rem, 1fr;
+       padding:0 3.2rem 0 3.2rem;
+       grid-gap:2rem;
+       margin-bottom:3rem;
+     
+   }
+    .activite h2
+    {
+        grid-row-start: 1;
+        grid-column: 1/5;
+    }
+    .activite :nth-child(2)
+    {
+        grid-row: 2/4;
+        grid-column: 1/1;
+    }
+    
+    .activite :nth-child(5)
+    {
+        grid-row: 2/4;
+        grid-column: 3/3;
+    }
+    
+   
+    .card3 
+    {
+      
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow:2px 2px 6px rgb(206, 204, 204) ;
+      /*height:1fr;*/
+      cursor: pointer;
+      display:flex;
+      flex-direction: column;
+      /*align-items:flex-start;*/
+      
+    }
+        .card3__thumb /*mise en forme image card hebergement*/
+        {
+        /*max-width: 20rem;   
+           /*#fffff - attention le div doit etre dimensionné*/
+        border-radius: 10px 00px 0 10px; 
+        /*margin-bottom: auto;*/
+        }
+        .card3 img
+        {
+            border-radius: 10px 10px 0 00px; 
+        }
+
+        .card3 h3
+        {
+            padding:1rem;
+        }
+        
+        /*---------------------------------------------------------------footer elements ---------------------------------------------------------------*/
+
+
+
+        .footer
+        {
+            grid-area:footer;
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            background-color: #f2f2f2;
+            padding:2rem 2rem 2rem 3.2rem;
+            line-height: 2rem;
+
+        }
+        .footer ul
+        {
+        
+            list-style: none;
+            padding:0 1rem 0 0;
+            margin:0;
+        }  
+        .footer h3
+        {
+            margin-bottom:0.5rem;
+            font-weight: bold;
+        }
+
+ /****************************************************MEDIA QUERIES********************************************************************/ 
+ @media screen and (max-width: 1101px)
+ {
+    .global_hebergement
+    {
+        
+        grid-template-columns:1fr;
+        grid-auto-rows: auto;
+        
+        grid-gap:0.5rem;/*ajusté*/
+        padding:0;/*ajusté*/
+        margin-bottom: 3rem;/*a revoir*/
+    }
+    
+    
+                 
+    /*---------------------------------------------------------"Populaire" card setting"--------------------------------------------------------------*/
+    
+        .populaire
+        {
+            
+            grid-row-start: 1;
+            grid-column-start:1 ;
+            display:grid;
+            grid-template-rows:auto;
+            grid-auto-rows: 9rem;
+            padding:1.25rem;
+            grid-gap:0.5rem;
+            border:none;
+            border-radius: 0;
+                
+        }
+        
+        .card2
+        {
+        display:flex;            
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow:2px 2px 6px rgb(206, 204, 204) ;
+        padding:0.4rem;
+        cursor: pointer;
+        max-height: 9rem;
+        align-content: flex-start;
+        justify-content: start;
+    
+        }
+
+        /*************************activites*********************/
+/*.activite
 {
-  font-size:0.75rem;
-  color:black
+    
+    grid-template-columns:repeat(3,1fr);
+    grid-auto-rows:5rem ;
+    margin-bottom:3rem;
   
 }
-.search
-{
-  font-size:0.75rem;
-  padding-left: 1rem;
-  font-weight: bold;
-  border:none;
-
-}
-.submit
-{
-  
-  border-radius: 0px 8px 8px 0px;
-  background-color: #0065fc;
-  border:none;
-  color: #ffffff;
-  font-size:0.75rem;
-  
-}
-
-
-/****************************************** filtres ************************************************************/
-
+    
+ /*.card3 
+ {
+   
+   min-width: 7rem;
+   
+ }*/
+ /*activite :nth-child(2)
+    {
+        grid-row:none;
+        grid-column: none;
+    }
+    
+    .activite :nth-child(5)
+    {
+        grid-row: none;
+        grid-column: none;
+    }*/
+        
+ @media screen and (max-width: 789px)
+ {
+   
+    .header__menu
+    {
+      
+      grid-template-columns:repeat(4,1fr);
+      /*justify-content: stretch;*/
+      grid-gap:0.5rem;      
+      padding:0 1rem 0 1rem ;
+      
+    }
+        /*#header__Logo__reservia
+        {
+            min-width: 5rem; 
+            
+        } */
+   .header__menu :nth-child(1)
+    {
+        justify-self: start;
+    }
+    /********************************secondary nav********************************************/
 .recherche__filtre
 {
-  
-  display:flex; /* attention mettre le flex pour ajuster les dimension au contenu du contenaire*/
-  flex-wrap:wrap;
-  align-items: center;
-  font-weight: bold;
-  font-size:1rem;
-  margin:1rem 0 2rem 0;
-  
+    font-size: 0.75rem;
 }
-.recherche__filtre div
-{
-  margin-right:1rem;
-}
-.recherche__filtre__contenaire
-{
-  display:flex;
-  border: 1px #f2f2f2 solid;
-  border-radius:10rem;
-  cursor: pointer;
-  flex-wrap:nowrap;
-
-}
-.recherche__filtre__contenaire:hover
-{
-  background-color: #deebff;
-  box-shadow: 2px 2px 2px rgba(0,101,252,2);
-}
-.recherche__filtre__fas
-{
-  
-  background-color: #deebff;  
-  text-align: center;
-  padding:0.5rem;
-  width: 1.5rem;
-  height:1.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items:center;
-  justify-content:center;
-  
-  
-}
-
 .recherche__filtre__text
 {
-  padding:0.5rem 1rem 0.5rem 0 ;
+  padding:0.25rem 0.5rem 0.25rem 0 ;
   align-self:center;
   margin:0;
   
 }
-/************comment **********************/
-.information
-{
-  
-  display:flex;
-  align-items: center;
-  
-}
-.information__fa /* achever le cadréaged e l'icon et sa taille*/
-{
-  border:1px black solid;
-  margin-right:1rem;
-  border-radius: 50%;
-  width:1.5rem;
-  height:1.5rem;
-  font-size:0.75rem;
-  text-align: center;
-  
-}
-/* MAIN ----------------------------------------Setup card for "hébergement", "activité", "populaire"--------------------------------------------*/
-
-/*common elements*/
-.global_hebergement
-{
-  grid-area:global_hebergement;
-  display:grid;
-  grid-template-columns:7fr 3fr;
-  grid-auto-rows: auto;
-  grid-gap:3rem;
-  padding-left:3rem;
-  padding-right:2rem;
-  margin-bottom: 3rem;
-}
-h2, em, .Pbold /*ajustement identique sur toutes les sections*/
-{
- 
-    font-weight: bold;
-    margin:0;
-    padding:0;
-}
-
-h3
-{
-    font-size: 1rem;
-    margin:0.5rem;
-}
-.card_p
-{
-  margin-left:0.5rem ;
-  margin-bottom:0.5rem ;
-  margin-top:0;
-}
-}
-.card__stars
-{
-  /* Le groupe '.stars' positionne les étoiles les unes à côté des autres sans espacements. */
-    display: flex; 
-    font-size: 1rem;
-    margin-left:0.5rem;
-}
-
-.fa-star/* Par défaut, une étoile est en gris, avec un padding et un curseur en forme de main. */
-{
-    color:#f2f2f2;
-    /*padding: 0.0625rem;*/
-}
-.fa-star.blue/* Si elle porte en plus la classe '.gold', elle sera en jaune. */
-{
-    color: rgb(0, 101, 252);
-}
-img
-{
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-}
-
-
-/*----------------------------------------------------"Hebergement card setting"------------------------------------------------------------------*/
-
-.hebergement
-{
-    grid-column-start: 1;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    border: 1px #f2f2f2 solid;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    grid-template-rows: 0.1fr 2fr 2fr 0.1fr;
-    padding:2rem;
-    grid-gap:2rem;
-   
-}
-.hebergement h2
-{
-  grid-row-start: 1;
-  grid-column: 1/4;
-}
-.card1 /*hebergement*/
-{
-    display:flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow:2px 2px 6px rgb(206, 204, 204) ;
-    border: 1px #ffffff solid;
-    padding:0.2rem;
-    cursor: pointer;
-    /*width: 1fr;
-    height:1fr;*/
-    
-    
-}
-.card1__thumb /*mise en forme image card hebergement*/
-{
-   
-    height: 7rem;       
-    border-radius: 10px 10px 0 0;
-    
-}
-.card1__thumb__img
-{
-    width:100% ; 
-    border-radius: 10px 10px 0 0;
-}
- /*---------------------------------------------------------"Populaire" card setting"--------------------------------------------------------------*/
-
-.populaire
+.recherche__filtre__fas
 {
     
-  grid-column-start: 2;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  border: 1px #f2f2f2 solid;
-  display:grid;
-  grid-template-rows:2rem 1fr 1fr 1fr;
-  padding:2rem;
-  grid-gap:2rem;
-}
-.trend
-{
-  grid-row-start: 1;
-  display:flex;
-  justify-content: space-between;
-   
-}
-.trend_fa
-{
-  align-self: baseline;
-  color: black;
-  font-size: 1rem;
-
-}
-.fa-chart-line
-{
-  color: black;
-  font-size: 1.5rem;
-  text-align: center;
-}
-.card2
-{
-  display:flex;
-  /*align-items:stretch;*/
-  justify-content: stretch;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow:2px 2px 6px rgb(206, 204, 204) ;
-  padding:0.2rem;
-  cursor: pointer;
-
-}
-
-  .card2__thumb /*mise en forme image card hebergement*/
-{
-  /*height: 14rem;  */ 
-  border-radius: 10px 00px 0 10px;
-  flex-shrink;1 
-}
-.card2__thumb__img
-{
-  width:6rem;
-  height: 8rem; 
-  border-radius: 10px 0px 0 10px; 
-}
-
-   /*--------------------------------------------------------"Actitivé" card setting -------------------------------------------------------------*/
-
-   .activite
-{
-    grid-area: activite;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-template-rows: 1rem, 1fr;
-    padding:2rem;
-    grid-gap:2rem;
-  
-}
-.activite h2
-{
-  grid-row-start: 1;
-}
- .card3 
- {
-   
-   background-color: #ffffff;
-   border-radius: 10px;
-   box-shadow:2px 2px 6px rgb(206, 204, 204) ;
-   border: 1px #ffffff solid;
-   width:1fr;
-  /* padding:3.25% 3.25% 3.25% 3.25%;*/
-   cursor: pointer;
- }
- .card3__thumb /*mise en forme image card hebergement*/
- {
-   width: 1fr;   
-   border: 1px black solid;     /*#fffff - attention le div doit etre dimansionné*/
-   border-radius: 10px 00px 0 10px; 
- }
-
-
-
-/*---------------------------------------------------------------footer elements ---------------------------------------------------------------*/
-.footer
-{
-    grid-area:footer;
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    background-color: #f2f2f2;
-    padding:2rem;
-    line-height: 2rem;
-}
-   
-
-
- /****************************************************MEDIA QUERIES********************************************************************/ 
- 
-
-@media screen and (max-width: 768px)
-{
-  body{
-    grid-template-rows:auto;
-    grid-template-areas: /*setup tempalte*/
-    "header"
-    "filtres"
-    "global_hebergement"
-    "activite"
-    "footer"
+    padding:0.5rem;
+    width: 0.75rem;
+    height:0.75rem;
+       
+    
   }
-    .global_hebergement
-  {
-    /*display:grid;*/
-    grid-template-columns:1fr;
-    padding:0;
-    /*margin-bottom: 3rem;*/
-  
-  }
-
-
-
-/*----------------------------------------------------"Hebergement card setting"------------------------------------------------------------------*/
-
+  /**************************************hebergement**************************************/
+    
+    
+    
     .hebergement
     {
         grid-row-start: 2;
+        grid-column-start:1 ;
         display:grid;
-        grid-template-columns:1fr;
-        grid-template-rows: repeat(8;1fr);
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows: 1fr;
+        padding:1.25rem;
+        grid-gap:0.5rem;
         background-color: white;
         border:none;
-        grid-gap:1rem;
+    }
+        .hebergement h2
+            {
+            grid-row-start: 1;
+            grid-column: 1/3;
+           
+            }
+            #afficher
+            {
+                font-size:1rem;
+                padding-top:1rem;
+            }
+            
+      /**********************************************************/  
+    .footer
+    {
+        
+        padding:1rem;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+
+    }  
+    .footer:nth-child(3)
+    {
+        grid-row-start: 2;
+    }
+ }
+ @media screen and (max-width: 375px)
+ {
+    .header
+    {
+        margin:1rem 1.25rem 1rem 1.25rem;
+    }
+    .header__menu
+    {
+      
+      grid-template-columns:repeat(2,1fr);
+      grid-template-rows: 2fr 2fr;  
+      justify-items: stretch;         
+      padding:0;
+      font-size: 1fr;
+
+      
+    }
+        #header__Logo__reservia
+        {
+            width: 4rem; 
+            
+        }  
+    .header__menu :nth-child(4)
+    {
+        grid-column-start: 2;
+        grid-row-start:1; 
+        justify-self: end;
+    }
+    .header__menu :nth-child(2)
+    {
+        grid-column-start: 1;
+        grid-row-start:2;
+       
+        justify-self: center;
         
     }
-      .hebergement h2
-      {
-        grid-column:1;
-        font-style: 1rem;
-      }
- /*---------------------------------------------------------"Populaire" card setting"--------------------------------------------------------------*/
 
-  .populaire
+        .header__menu :nth-child(3)
+    {
+        grid-column-start: 2;
+        grid-row-start:2;
+        justify-self: center;
+        
+        
+    }   
+    
+   /****************************************************secondary nav************************************************************/ 
+    
+.submit
+{
+  
+  border-radius: 8px;
+  width: 2rem;
+  height: 2rem;
+  font-size:0;
+  font-family: 'FontAwesome'; /*il manque l'icone loupe*/
+  content: "\f002";
+ 
+}
+
+/***************filters***********************/
+.recherche    {
+        margin:1rem 1.25rem 1rem 1.25rem;
+        
+    }
+    .recherche__filtre
+{
+    display:grid;
+    grid-template-columns: 9rem 1fr;
+    grid-template-rows: 4;
+    align-items: center;
+    margin:0 0 1rem 0;
+}
+    .recherche__filtre :nth-child(1)
+    {
+        grid-row-start: 1;
+        grid-column: 1/2;
+    }
+    .recherche__filtre :nth-child(2)
+    {
+        grid-row-start: 2;
+        grid-column: 1/1;
+    
+    }
+    .recherche__filtre :nth-child(3)
+    {
+        grid-row-start: 2;
+        grid-column: 2/2;
+    }
+    .recherche__filtre :nth-child(4)
+    {
+        grid-row-start: 3;
+    }
+    .recherche__filtre :nth-child(5)
+    {
+        grid-row-start: 4;
+    }
+#filtrediv
+{
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+/***********************************************hebergement************************************/
+
+.hebergement
+    {
+        grid-row-start: 2;
+        grid-column-start:1 ;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows: auto;
+             
+        border:none;
+    }
+        .hebergement h2
+            {
+            grid-row-start: 1;
+            grid-column: 1;
+            }
+/*****************************activité********************************/
+  .activite
   {
-      
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-gap:1rem;
-
+    
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(9,1fr);
+      padding:0 3.2rem 0 3.2rem;
+      grid-gap:2rem;
+      margin-bottom:3rem;
     
   }
-  .activite
-{
-    grid-template-columns:1fr;
-    grid-template-rows: 1rem repeat(6,1fr);
-    padding:2;
-    grid-gap:1.1rem;
- }
- .card3
- {
-   height:1fr;
-   width:1fr;
- }
- .footer
- {
-  
-  grid-template-columns:1fr;
-  grid-template-rows: repeat(3,1fr);
- }
+    .activite h2
+    {
+        grid-row-start: 1;
+        grid-column: 1/2;
+    }
+    .activite :nth-child(2)
+    {
+        grid-row: auto;
+        grid-column: auto;
+    }
+    
+    .activite :nth-child(5)
+    {
+        grid-row: auto;
+        grid-column: auto;
+    }
+    
+        
 
-}
+       
+/**************************************************footer************************************************/
+    .footer
+    {
+        font-size:0.75rem;
+        padding:1.25rem;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: 1fr;
+        
+
+    }  
+    .footer:nth-child(3)
+    {
+        grid-row-start: none;
+    }
+ }
