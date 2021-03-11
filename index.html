@@ -14,7 +14,7 @@
         <script src="https://kit.fontawesome.com/349d059d21.js" crossorigin="anonymous"></script> <!--Font awesome implementation -->
 <!--Minimalhead template for basic SEO -->
     </head>
-    <body>
+    <body >
         <header class="header"> <!-- Grid tag, 3 columns? (1 logo, 1 for nav 1 for login)-->
             <nav class="header__menu">
                 <p>
@@ -34,7 +34,11 @@
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <input class="search" type="search" name="search-text" value="Marseille, France" >    <!--id = identication du form & Q variable envoyé en serveur--> 
-                <input class="submit" type="submit" value="Rechercher" />   <!-- <button>Rechercher</button> générique java script-->
+                <button name="submit">
+                    <span class="normal">Rechercher</span>
+                    <span class="responsive">
+                        <i class="fas fa-search"></i></span>
+                </button>
             </form>            
             <div class="recherche__filtre">
                 <div id="filtrediv">Filtres</div>
@@ -48,8 +52,7 @@
                     <div class="recherche__filtre__fas">
                         <i class="fas fa-child"></i>
                     </div>
-                    <p class="recherche__filtre__text">Familial</p>
-                    </p>
+                    <p class="recherche__filtre__text">Familial</p>                    
                 </div>
                 <div class="recherche__filtre__contenaire">
                     <div class="recherche__filtre__fas">
@@ -146,7 +149,7 @@
                 </article>
                 <article class="card1">
                     <div class="card1__thumb"> 
-                        <img class="card1__thumb__img" src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />
+                        <img class="card1__thumb__img" src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />
                     </div>
                     <h3>Hôtel chez Amina</h3> 
                     <p >Nuit à partir de 96<em>€</em></p> 
