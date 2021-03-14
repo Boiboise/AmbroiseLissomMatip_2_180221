@@ -19,7 +19,7 @@ body /*inheritance*/
     
     
 }
-
+em{font-weight:bold;}
 
 a:link, a:visited
 { 
@@ -272,7 +272,7 @@ img
 {
     grid-area:global_hebergement;
     display:grid;
-    grid-template-rows:repeat(auto,1fr);
+    grid-template-rows:repeat(auto-fill,1fr);
     line-height: 1.5rem;
     
 }
@@ -406,6 +406,7 @@ img
             box-shadow:2px 2px 6px rgb(206, 204, 204) ;
             padding:0.4rem;
             cursor: pointer;
+            max-width:21rem;
             
             }
               
@@ -444,7 +445,8 @@ img
     
         border-radius: 10px;
         box-shadow:2px 2px 6px rgb(206, 204, 204) ; 
-        
+        cursor: pointer;
+            
                    
             
         }
@@ -454,10 +456,7 @@ img
         {
             margin:0.75rem;
         }
-        .card3 :nth-child()
-        {
-            flex-shrink:3;
-        }
+        
                 .card3 img
                 {
                     border-radius: 10px 10px 0 00px;        
