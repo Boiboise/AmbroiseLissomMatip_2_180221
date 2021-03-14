@@ -20,7 +20,7 @@ body /*inheritance*/
     
 }
 
-
+em{font-weight: bold;}
 a:link, a:visited
 { 
  text-decoration:none; 
@@ -98,6 +98,7 @@ img
   {
   border-bottom:1px solid #0065fc;
   border-top:0;
+  background-color:#deebff;
   
   }
   .header__menu div
@@ -393,7 +394,7 @@ img
             {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-around;
+                justify-content: center;
             }
             .card2
             {
@@ -406,6 +407,7 @@ img
             box-shadow:2px 2px 6px rgb(206, 204, 204) ;
             padding:0.4rem;
             cursor: pointer;
+            max-width: 21rem;
             
             }
               
@@ -453,6 +455,7 @@ img
         .card3 h3
         {
             margin:0.75rem;
+            padding-bottom:0.75rem;
         }
         .card3 :nth-child()
         {
