@@ -34,7 +34,7 @@
                 <div class="recherche__location">
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
-                <input class="search" type="search" name="search-text" value="Marseille, France" >    <!--id = identication du form & Q variable envoyé en serveur--> 
+                <input class="search" type="search" name="search-text" placeholder="Marseille, France" >    <!--id = identication du form & Q variable envoyé en serveur--> 
                 <button name="submit">
                     <span class="normal">Rechercher</span>
                     <span class="responsive">
@@ -76,12 +76,12 @@
                 <div class="information__fa">
                     <i class="fas fa-info"></i>
                 </div>
-                <p >Plus de  logements sont disponibles dans cette visite</p> <!-- le 500 viens pobablement du site -->
+                <p >Plus de 500 logements sont disponibles dans cette visite</p> <!-- le 500 viens pobablement du site -->
             </div>
         </section>
         <section class="global_hebergement">  
             <div class="hebergement"> 
-                <h2>Hébergement à Marseille</h2>
+                <h2 id=hebergement>Hébergements à Marseille</h2>
                 <div class="hosting_art">
                     <article class="card1" >
                         <a href="#"><!--Definition de la carte parent de la section hénergement-->
@@ -120,7 +120,7 @@
                             <div class="card1__thumb"> 
                                 <img class="card1__thumb__img" src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />
                             </div>
-                            <h3>Hôtel les mouettes</h3>
+                            <h3>Hôtel Les mouettes</h3>
                             <p >Nuit à partir de 76<em>€</em></p>  
                             <div class="card__stars"> 
                                 <i class="fas fa-star blue"></i>
@@ -184,17 +184,17 @@
             </div>
             <div class="trend"> <!--<i class="fas fa-chart-line"></i>-->
                 <div class="trend__title">
-                    <h2>Les plus populaire</h2>
+                    <h2 id=activite>Les plus populaire</h2>
                     <div class="trend_fa">
                         <i class="fas fa-chart-line"></i>
                     </div>
                 </div>
                 <div class="trend__art">
-                    <article class="card2">
+                    <a href="#"><article class="card2">
                             <img class="card2__thumb__img" src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />
                             <div>
-                                <h3>hôtel le soleil du matin</h3>
-                                <p >Nuit à partir de 96<em>€</em></p> 
+                                <h3>Hôtel le soleil du matin</h3>
+                                <p >Nuit à partir de 128<em>€</em></p> 
                                 <div class="card__stars"> 
                                     <i class="fas fa-star blue"></i>
                                     <i class="fas fa-star blue"></i>
@@ -204,12 +204,12 @@
                                 </div>
                             </div>
                        
-                    </article>
-                    <article class="card2">
+                    </article></a>
+                    <a href="#"><article class="card2">
                              <img class="card2__thumb__img"  src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />
                             <div>
                                 <h3>Au coeur de l'eau Chambre d'hôtes</h3>
-                                <p >Nuit à partir de 96<em>€</em></p>
+                                <p >Nuit à partir de 71<em>€</em></p>
                                 <div class="card__stars"> 
                                     <i class="fas fa-star blue"></i>
                                     <i class="fas fa-star blue"></i>
@@ -219,12 +219,12 @@
                                 </div>
                             </div>
                         
-                    </article>
-                    <article class="card2">
+                    </article></a>
+                    <a href="#"> <article class="card2">
                             <img class="card2__thumb__img"  src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />
                             <div>
-                                <h3>hotel Tout bleu et Blanc</h3>
-                                <p >Nuit à partir de 96<em>€</em></p> 
+                                <h3>Hôtel Tout bleu et Blanc</h3>
+                                <p >Nuit à partir de 68<em>€</em></p> 
                                 <div class="card__stars">
                                     <i class="fas fa-star blue"></i>
                                     <i class="fas fa-star blue"></i>
@@ -234,38 +234,73 @@
                                 </div>
                             </div>
                         
-                    </article>
+                    </article></a>
                 </div>                
             </div>
         </section>
         <section class="activity"> <!-- aside? ne représente pas vraiment la mission du site-->
             <h2>Activités à Marseille</h2>  
             <div class="activity__article">       
-               <article class="carda card3">
-                <div class="card3_contenaire"><img class="imXL" src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /> </div>                  
-                <h3>Vieux port</h3>
-                </article>
-                <article class="cardb card3">                    
-                    <div class="card3_contenaire">  <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash2.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />    </div>                
-                    <h3>Fort de Pomègues</h3>                    
-                </article>
-                 <article class="card3">                    
-                    <div class="card3_contenaire">   <img src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />     </div>               
-                    <h3>Îles du frioul</h3>                   
-                </article>
-                <article class="card3">
+               <a href="#" class="carda"><div class="card3">                   
+                       
+                           <div class="card3_contenaire">
+                                <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" /> 
+                            </div>                  
+                            <h3>Vieux port</h3>
+                        
                     
-                    <div class="card3_contenaire">      <img class="imXL" src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />    </div>                
-                    <h3>Parc National des Calanques</h3>                     
-                </article>
-                <article class="card3">                                   
-                    <div class="card3_contenaire">         <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />      </div>              
-                    <h3>Notre-Dame-de-la-Garde</h3>                  
-                </article>                
-                     <article class="card3">
-                        <div class="card3_contenaire">           <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg"  alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />    </div>                
-                    <h3>Parc Longchamp</h3>                   
-                </article>
+               </div></a>
+                       
+               <div class="cardb" >
+                    <a href="#">
+                        <div class="card3">                   
+                            <div class="card3_contenaire">  
+                                <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash2.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />    
+                            </div>                
+                            <h3>Fort de Pomègues</h3>                    
+                        </div>
+                    </a>
+               </div>
+                <div class="cardc">
+                    <a href="#">
+                        <div class="card3">                 
+                            <div class="card3_contenaire">   
+                                <img src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />     
+                            </div>               
+                            <h3>Îles du frioul</h3> 
+                        </div>
+                    </a>                  
+                </div>
+                <div class="cardd">
+                    <a href="#">
+                        <div class="card3">                     
+                            <div class="card3_contenaire">      
+                                <img class="imXL" src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />    
+                            </div>                
+                            <h3>Parc National des Calanques</h3> 
+                        </div>
+                    </a>                   
+                </div>
+                <div class="carde">
+                    <a href="#">
+                        <div class="card3">                     
+                            <div class="card3_contenaire">         
+                                <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />      
+                            </div>              
+                            <h3>Notre-Dame-de-la-Garde</h3> 
+                        </div>
+                    </a>                 
+                </div>                
+                <div class="cardf">
+                    <a href="#">
+                        <div class="card3">                     
+                            <div class="card3_contenaire">  
+                                <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg"  alt="Auberge de la Cannebière" title="Cliquez pour agrandir" />    
+                            </div>                
+                            <h3>Parc Longchamp</h3> 
+                        </div>
+                    </a>                  
+                </div>
             </div>   
         </section>
         <footer> <!-- See what is relevant either NAV tag or Hn tag voir comment créer un menu complexhgiehrg irjgifre ihremi gherng -->
