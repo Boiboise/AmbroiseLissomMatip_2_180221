@@ -20,7 +20,12 @@ body /*inheritance*/
     
 }
 
-em{font-weight: bold;}
+strong
+{
+    font-weight: bold;
+    font-style: normal;
+
+}
 a:link, a:visited
 { 
  text-decoration:none; 
@@ -200,7 +205,7 @@ img
         {
         display:flex;        
         flex-wrap:wrap;
-        margin:0 1rem 0.5rem 0;
+        margin:0 1rem 0rem 0;
         white-space: nowrap; /*for "animal autorisé" no break word*/
         
 
@@ -330,8 +335,8 @@ img
                 margin-bottom:  1rem;
                 border-radius: 10px;
                 box-shadow:2px 2px 6px rgb(206, 204, 204) ;
-                border: 1px #ffffff solid;
-                padding:0.4rem;/*ajusté*/
+                border: 4px #ffffff solid;
+                /*padding:0.4rem;/*ajusté*/
                 cursor: pointer;
                 height: 12rem;
                 width:20.5rem;
@@ -355,6 +360,10 @@ img
                         border-radius: 10px 10px 0 0;
                         
                     }
+            .hebergement span{ font-weight: bold;margin-top:1rem;}  
+            .hebergement h3{margin-left:1rem;}  
+            .hebergement p{margin-left:1rem;}  
+            .hebergement .card__stars{margin-left:1rem;}      
  /****************************************popular**********************************************/
     .trend
         {                   
