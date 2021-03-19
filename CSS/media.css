@@ -172,7 +172,8 @@
                     width:auto;
                     height: auto;
                 }
-           
+   
+    .hebergement .card__stars{margin-bottom:0.5rem;} 
     /**********************populaire***********/
         .trend{border-radius: 10px;}   
         .trend__title h2 {margin:0;}
