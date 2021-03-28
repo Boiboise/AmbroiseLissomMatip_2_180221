@@ -20,296 +20,306 @@ body /*inheritance*/
     
 }
 
-strong
-{
-    font-weight: bold;
-    font-style: normal;
+    strong
+    {
+        font-weight: bold;
+        font-style: normal;
 
-}
-a:link, a:visited
-{ 
- text-decoration:none; 
- color:#000;
-} 
+    }
+    a:link, a:visited
+    { 
+    text-decoration:none; 
+    color:#000;
+    } 
 
-h2{
-font-size: 1.5rem;
+    h2{
+    font-size: 1.5rem;
 
-}
-h3
-{
-    font-weight: bold;
-}
-p
-{
-    margin:0;
+    }
+    h3
+    {
+        font-weight: bold;
+    }
+    p
+    {
+        margin:0;
+        
+    }
+    img
+    {
+        object-fit: cover;
+        object-position: center;
+        max-width: 100%;
+        max-height: 100%;
     
-}
-img
-{
-    object-fit: cover;
-    object-position: center;
-    max-width: 100%;
-    max-height: 100%;
-   
-}
+    }
 /*---------------------------------------------------------header setting------------------------------------------------------------------------*/
-.header
-  {
-      grid-area:header;
-      margin:0rem 1rem 1rem 1rem;
-     
-  }
+    .header
+    {
+        grid-area:header;
+        margin:0rem 1rem 1rem 1rem;
+        
+    }
 
-  .header__menu
-  {
-    display: grid;
-    grid-template-columns:repeat(2,1fr);
-    grid-template-rows: 2fr 2fr;
-    align-items: flex-end;
-    justify-items: stretch;
-    padding:0;
-    font-size: 1rem;
-    grid-gap:0;
-    text-align: center;
+        .header__menu
+        {
+            display: grid;
+            grid-template-columns:repeat(2,1fr);
+            grid-template-rows: 2fr 2fr;
+            align-items: flex-end;
+            justify-items: stretch;
+            padding:0;
+            font-size: 1rem;
+            grid-gap:0;
+            text-align: center;
 
+            
+        }
     
-  }
-  
-      #header__Logo__reservia
-      {
-          width: 7rem; 
-          padding-top: 1rem;
-          
-      }  
-  .header__menu :nth-child(4)
-  {
-      grid-column-start: 2;
-      grid-row-start:1; 
-      justify-self: end;
-      font-weight: bold;
-      
-      
-  }
-  .header__menu :nth-child(1)
-  {
-     align-self: center;
-     justify-self: start;
-     
-      
-  }
-  
-  .header__menu__list__hoover:hover
-  {
-  border-bottom:1px solid #0065fc;
-  border-top:0;
-  background-color:#deebff;
-  
-  }
-  .header__menu div
-  {
-      padding: 0rem 0 0.5rem 0;
-  }
-  .header__menu__list__hoover
-  {
-      border-bottom:1px solid #f2f2f2;
-      
-  }
-  #log
-  {
-    color:#0065fc;
-  }
+            #header__Logo__reservia
+            {
+                width: 7rem; 
+                padding-top: 1rem;
+                
+            }  
+            .header__menu :nth-child(4)
+            {
+                grid-column-start: 2;
+                grid-row-start:1; 
+                justify-self: end;
+                font-weight: bold;
+                
+                
+            }
+            .header__menu :nth-child(1)
+            {
+                align-self: center;
+                justify-self: start;
+                    
+            }
+                .header__menu div
+            {
+                padding: 0rem 0 0.5rem 0;
+            }
+                .header__menu__list__hoover
+                {
+                    border-bottom:1px solid #f2f2f2;
+                    
+                }
+                .header__menu__list__hoover:hover
+                {
+                border-bottom:1px solid #0065fc;
+                border-top:0;
+                
+                }
+
+                    .hover:hover
+                    {
+                        color:#0065fc;
+                    }
+        
+        
+                #log
+                {
+                    color:#0065fc;
+                }
 
 /*************************************************filters ************************************************************************/
 /* secondary nav setting*/
-.recherche
-{
-    grid-area:filters;
-    margin:0rem 1rem 1rem 1rem;
-}
-/* h1 setting : bold + normal*/
+    .recherche
+    {
+        grid-area:filters;
+        margin:0rem 1rem 1rem 1rem;
+    }
+    /* h1 setting : bold + normal*/
 
-    h1{margin-bottom:1rem;}
-        .recherche span
+        h1
         {
-            font-weight: normal;
-            font-size:0.9rem;
+            margin-bottom:1rem;
+        }
+        .titre1
+        {
+            margin-bottom: 2rem;
             
         }
-    /*searche engine implementation*/
-    form
-    {
-        display: inline-flex; /*ajuste la taile de la div au dimension du conteneur*/
-        justify-content: center;
-        border-radius: 10px;
-        border: 1px #f2f2f2 solid;
-        height: 3rem; 
-        /*margin-bottom:0.25rem;*/
-        font-size:1rem;
-    
-    }
-    .recherche__location
-    {
-        background-color:#f2f2f2;
-        border-radius: 8px 00px 00px 8px;
-        border: 1px #f2f2f2 solid;
-        width:3rem;
-        text-align: center;
-        padding-top:0.1rem;
-        
-    }
-    .fa-map-marker-alt
-    {
-    font-size:1rem;
-    padding-top: 0.5rem;
-    color:black
-    
-    }
-    .search
-    {
-    
-    padding-left: 1rem;
-    font-weight: bold;
-    border:none;
-
-    }
-    button
-    {
-    
-    border-radius:8px;
-    background-color: #0065fc;
-    width: 3rem;
-    height: 3rem; 
-    border:none;
-    color: #ffffff;
-    font-weight: bold;
-    cursor: pointer;
-    
-    
-    }
-    .normal
-    {
-        display:none;
-    }
-/* filters tool*/
-    .filters
-    {
-    display:flex; /* attention mettre le flex pour ajuster les dimension au contenu du contenaire*/
-    flex-direction: column;
-    font-weight: bold;    
-    margin:1rem 0 1rem 0;    
-    
-    }
-        
-        .filters__contenaire
+            
+        /*searche engine implementation*/
+        form
         {
-        display:flex;        
-        flex-wrap:wrap;
-        margin:0 1rem 0rem 0;
-        white-space: nowrap; /*for "animal autorisé" no break word*/
+            display: inline-flex; /*ajuste la taile de la div au dimension du conteneur*/
+            justify-content: center;
+            border-radius: 10px;
+            border: 1px #f2f2f2 solid;
+            height: 3rem; 
+            /*margin-bottom:0.25rem;*/
+            font-size:1rem;
         
-
         }
-
-            .filters__contenaire__button
+            .recherche__location
             {
-                display: flex;
-                border-top: 2px  #f2f2f2 solid;
-                border-right: 2px #f2f2f2 solid;
-                border-bottom: 2px  #f2f2f2 solid;
-                border-radius:10rem;
-                cursor: pointer;
-                margin:0.2rem 0.2rem 0.2rem 0;
-            }
-                .filters__contenaire__button:hover
-                {
-                background-color: #deebff;
-                box-shadow: 2px 2px 2px rgba(0,101,252,2);
-                }
-                .recherche__filtre__fas
-                {
-                
-                background-color: #deebff;  
+                background-color:#f2f2f2;
+                border-radius: 8px 00px 00px 8px;
+                border: 1px #f2f2f2 solid;
+                width:3rem;
                 text-align: center;
-                padding:0.5rem;
-                width: 1rem;
-                height:1rem;
-                border-radius: 50%;
-                display: flex;
-                align-items:center;
-                justify-content:center;
+                padding-top:0.1rem;
                 
-                
-                }
-                .recherche__filtre__fas .fas{color:#0065fc}
-
-                .recherche__filtre__text
+            }
+                .fa-map-marker-alt
                 {
-                padding:0.5rem 0.75rem 0.25rem 0.5rem ;
-                align-self:center;
-                margin:0;
+                font-size:1rem;
+                padding-top: 0.5rem;
+                color:black
                 
                 }
-  /************comment **********************/
-  .information
-  {
-  
-  display:flex;
-  align-items: center;
-  
-  }
-      .information__fa /* achever le cadréaged e l'icon et sa taille*/
-      {
-      border:1px #deebff solid;
-      margin-right:1rem;
-      border-radius: 50%;
-      width:1rem;
-      height:1rem;            
-      color:#0065fc;
-      font-size:0.7rem;
-      text-align:center;
-      
-      }
+            .search
+            {
+            
+            padding-left: 1rem;
+            font-weight: bold;
+            border:none;
+
+            }
+           ::placeholder
+            {
+                color:black;
+            }
+            button
+            {
+            
+            border-radius:8px;
+            background-color: #0065fc;
+            width: 3rem;
+            height: 3rem; 
+            border:none;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+            
+            
+            }
+                .normal
+                {
+                    display:none;
+                }
+    /* filters tool*/
+        .filters
+        {
+        display:flex; /* attention mettre le flex pour ajuster les dimension au contenu du contenaire*/
+        flex-direction: column;
+        font-weight: bold;    
+        margin:1rem 0 1rem 0;    
+        
+        }
+            
+            .filters__contenaire
+            {
+            display:flex;        
+            flex-wrap:wrap;
+            margin:0 1rem 0rem 0;
+            white-space: nowrap; /*for "animal autorisé" no break word*/
+            
+
+            }
+
+                .filters__contenaire__button
+                {
+                    display: flex;
+                    border-top: 2px  #f2f2f2 solid;
+                    border-right: 2px #f2f2f2 solid;
+                    border-bottom: 2px  #f2f2f2 solid;
+                    border-radius:10rem;
+                    cursor: pointer;
+                    margin:0.5rem 0.5rem 0 0;
+                }
+                    .filters__contenaire__button:hover
+                    {
+                    background-color: #deebff;
+                    box-shadow: 2px 2px 2px rgba(0,101,252,2);
+                    }
+                    .recherche__filtre__fas
+                    {
+                    
+                    background-color: #deebff;  
+                    text-align: center;
+                    padding:0.5rem;
+                    width: 1rem;
+                    height:1rem;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items:center;
+                    justify-content:center;
+                    
+                    
+                    }
+                    .recherche__filtre__fas .fas{color:#0065fc}
+
+                    .recherche__filtre__text
+                    {
+                    padding:0.5rem 0.75rem 0.25rem 0.5rem ;
+                    align-self:center;
+                    margin:0;
+                    
+                    }
+    /************comment **********************/
+        .information
+        {
+        
+        display:flex;
+        align-items: center;
+        
+        }
+            .information__fa /* achever le cadréaged e l'icon et sa taille*/
+            {
+            border:1px #deebff solid;
+            margin-right:1rem;
+            border-radius: 50%;
+            width:1rem;
+            height:1rem;            
+            color:#0065fc;
+            font-size:0.7rem;
+            text-align:center;
+            
+            }
 
  /* MAIN ----------------------------------------Setup card for "hébergement", "activité", "populaire"--------------------------------------------*/
 
 /*common elements*/
-.global_hebergement
-{
-    grid-area:global_hebergement;
-    display:grid;
-    grid-template-rows:repeat(auto,1fr);
-    line-height: 1.5rem;
-    
-}
-    .trend
+    .global_hebergement
     {
-        grid-row: 1;
-      
+        grid-area:global_hebergement;
+        display:grid;
+        line-height: 1.5rem;
+        
     }
+        .trend
+        {
+            grid-row: 1;
+        
+        }
 
-    .global_hebergement h3
-    {
-        margin:0;
-    }
-    .card__stars/*ajusté*/
-    {
-    /* Le groupe '.stars' positionne les étoiles les unes à côté des autres sans espacements. */
-        display: flex; 
-       
-   }
+        .global_hebergement h3
+        {
+            margin:0;
+        }
+        .card__stars/*ajusté*/
+        {
+        /* Le groupe '.stars' positionne les étoiles les unes à côté des autres sans espacements. */
+            display: flex; 
+        
+        }
 
-    .fa-star/* Par défaut, une étoile est en gris, avec un padding et un curseur en forme de main. *//*ajusté*/
-    {
-        color:#f2f2f2;
-        /*padding: 0.0625rem;*/
-    }
-    .fa-star.blue/* Si elle porte en plus la classe '.gold', elle sera en jaune. *//*ajusté*/
-    {
-        color: rgb(0, 101, 252);
-    }
-/********************************hosting*-****************************/
-    .hebergement
+            .fa-star/* Par défaut, une étoile est en gris, avec un padding et un curseur en forme de main. *//*ajusté*/
+            {
+                color:#f2f2f2;
+            
+            }
+            .fa-star.blue/* Si elle porte en plus la classe '.gold', elle sera en jaune. *//*ajusté*/
+            {
+                color: rgb(0, 101, 252);
+            }
+    /********************************hosting*-****************************/
+        .hebergement
         {
             padding:0 1rem 0 1rem;
             margin-bottom:3rem;
@@ -321,51 +331,69 @@ img
             
         
         }
-        .hosting_art
-        {
-            display:flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            
-
-        }
-            .card1 /*hebergement*/
+            .hosting_art
             {
-            
-                margin-bottom:  1rem;
-                border-radius: 10px;
-                box-shadow:2px 2px 6px rgb(206, 204, 204) ;
-                border: 4px #ffffff solid;
-                /*padding:0.4rem;/*ajusté*/
-                cursor: pointer;
-                height: 12rem;
-                width:20.5rem;
-                                
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
                 
-            }
-            
 
-                .card1__thumb /*mise en forme image card hebergement*/
+            }
+                .card1 /*hebergement*/
                 {
+                
+                    margin-bottom:  1rem;
+                    border-radius: 20px;
+                    box-shadow:2px 2px 6px rgb(206, 204, 204) ;
+                    border: 4px #ffffff solid;
+                    /*padding:0.4rem;/*ajusté*/
+                    cursor: pointer;
+                    height: 12rem;
+                    width:20.5rem;
+                    position: relative;
+                                    
                     
-                        border-radius: 10px 10px 0 0;/*ajusté*/
-                        padding-bottom: 0.4rem;/*ajusté*/
-                    
-                        
                 }
-                    .card1__thumb__img
+                
+
+                    .card1__thumb /*mise en forme image card hebergement*/
                     {
-                        width:100% ;
-                        height: 7rem;
-                        border-radius: 10px 10px 0 0;
                         
+                            border-radius: 15px 15px 0 0;/*ajusté*/
+                            padding-bottom: 0.4rem;/*ajusté*/
+                            overflow: hidden;
+                            
                     }
-            .hebergement span{ font-weight: bold;margin-top:1rem;}  
-            .hebergement h3{margin-left:1rem;}  
-            .hebergement p{margin-left:1rem;}  
-            .hebergement .card__stars{margin-left:1rem;}      
- /****************************************popular**********************************************/
-    .trend
+                        .card1__thumb__img
+                        {
+                            width:100% ;
+                            height: 7rem;
+                            border-radius: 15px 15px 0 0;
+                           
+                            
+                        }
+               
+                    .hebergement h3
+                    {
+                        margin-left:1rem;
+                    }  
+                    .hebergement p
+                    {
+                        margin-left:1rem;
+                    } 
+                    .hebergement .card__stars
+                    {
+                        position:absolute;
+                        bottom:0;
+                        margin-left:1rem;
+                    }  
+            .hebergement span
+            { 
+                font-weight: bold;
+                margin-top:1rem;
+            }      
+    /****************************************popular**********************************************/
+        .trend
         {                   
             padding:0 1rem 0 1rem;
             background-color: #f2f2f2;
@@ -378,7 +406,7 @@ img
         }
             .trend__title
             {
-           
+        
             display:flex;
             justify-content: space-around;
             margin-bottom: 1rem;
@@ -405,22 +433,26 @@ img
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            .card2
-            {
-            display:grid;
-            grid-template-columns: 2fr 3fr;
-            grid-gap:1rem;            
-            border-radius: 10px;
-            background-color: #ffffff;
-            margin-bottom: 1rem;
-            box-shadow:2px 2px 6px rgb(206, 204, 204) ;
-            padding:0.4rem;
-            cursor: pointer;
-            max-width: 21rem;
-            
-            }
-              
-                 .card2__thumb__img
+                .card2
+                {
+                display:grid;
+                grid-template-columns: 2fr 3fr;
+                grid-gap:1rem;            
+                border-radius: 10px;
+                background-color: #ffffff;
+                margin-bottom: 1rem;
+                box-shadow:2px 2px 6px rgb(206, 204, 204) ;
+                padding:0.4rem;
+                cursor: pointer;
+                max-width: 21rem;
+                position: relative;
+                
+                }
+                .card2 h3
+                {
+                    margin-top:0.5rem;
+                }
+                .card2__thumb__img
                     {
                     width:100%;
                     height:8rem;
@@ -429,8 +461,10 @@ img
                     }
                 .card2 .card__stars
                 {
-                    margin-top:2rem;
-                    margin-bottom:0.4rem;
+                 
+                  position: absolute;
+                  bottom: 1rem;
+                    
                 }
 
          /*--------------------------------------------------------"Actitivé" card setting -------------------------------------------------------------*/
@@ -450,26 +484,17 @@ img
             justify-content: space-evenly;
             
         }
-        .card3 
-        {
-    
-        border-radius: 10px;
-        box-shadow:2px 2px 6px rgb(206, 204, 204) ; 
+            .card3 
+            {
         
-                   
+            border-radius: 10px;
+            box-shadow:2px 2px 6px rgb(206, 204, 204) ; 
             
-        }
+                    
+                
+            }
     
-        
-        .card3 h3
-        {
-            margin:0.75rem;
-            padding-bottom:0.75rem;
-        }
-        .card3 :nth-child()
-        {
-            flex-shrink:3;
-        }
+              
                 .card3 img
                 {
                     border-radius: 10px 10px 0 00px;        
@@ -477,7 +502,11 @@ img
                     height: 8.5rem;
                          
                 }
-           
+                .card3 h3
+                {
+                    margin:0.75rem;
+                    padding-bottom:0.75rem;
+                }
         
 /**************************************footer*****************************************/
     footer
