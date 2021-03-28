@@ -182,7 +182,7 @@ button {
   border-bottom: 2px #f2f2f2 solid;
   border-radius: 10rem;
   cursor: pointer;
-  margin: 0.5rem 0.5rem 0 0;
+  margin: 0.75rem 0.75rem 0 0;
 }
 .filters__contenaire__button:hover {
   background-color: #deebff;
@@ -192,8 +192,8 @@ button {
   background-color: #deebff;
   text-align: center;
   padding: 0.5rem;
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -204,7 +204,7 @@ button {
 }
 
 .recherche__filtre__text {
-  padding: 0.5rem 0.75rem 0.25rem 0.5rem;
+  padding: 0.75rem 0.75rem 0.75rem 0.75rem;
   align-self: center;
   margin: 0;
 }
@@ -268,7 +268,7 @@ button {
   justify-content: space-evenly;
 }
 .card1 /*hebergement*/ {
-    display:flex;
+  display: flex;
   margin-bottom: 1rem;
   border-radius: 20px;
   box-shadow: 2px 2px 6px rgb(206, 204, 204);
@@ -277,13 +277,10 @@ button {
   cursor: pointer;
   height: 12rem;
   width: 20.5rem;
-  
 }
-.ajust
-{
-    display:grid;
-    grid-template-rows:7rem 1fr;
-
+.ajust {
+  display: grid;
+  grid-template-rows: 7rem 1fr;
 }
 .card1__thumb /*mise en forme image card hebergement*/ {
   border-radius: 15px 15px 0 0; /*ajusté*/
@@ -303,10 +300,9 @@ button {
   margin-left: 1rem;
 }
 .hebergement .card__stars {
- 
-   margin-left: 1rem;
-    margin-top:auto;
-  padding-bottom:0.5rem;
+  margin-left: 1rem;
+  margin-top: auto;
+  /*padding-bottom:0.2rem;*/
 }
 .hebergement span {
   font-weight: bold;
@@ -324,8 +320,9 @@ button {
 }
 .trend__title {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 1rem;
+  width: 100%;
 }
 .trend_fa {
   margin-left: 5rem;
@@ -364,15 +361,13 @@ button {
   height: 8rem;
   border-radius: 10px 0px 0 10px;
 }
-.star
-{
-    display:flex;
-    flex-direction: column;
+.star {
+  display: flex;
+  flex-direction: column;
 }
 .card2 .card__stars {
-  margin-top:auto;
-  padding-bottom:0.5rem;
-  
+  margin-top: auto;
+  padding-bottom: 0.5rem;
 }
 
 /*--------------------------------------------------------"Actitivé" card setting -------------------------------------------------------------*/

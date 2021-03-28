@@ -21,6 +21,7 @@
   }
   .header__menu :nth-child(4) {
     grid-column-start: 9;
+    justify-self: center;
   }
   .header__menu p {
     text-align: left;
@@ -129,11 +130,9 @@
     margin: 0;
     width: auto;
     height: auto;
-    
   }
 
   .hebergement .card__stars {
-    
     margin-bottom: 0.5rem;
   }
   /**********************populaire***********/
