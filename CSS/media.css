@@ -107,9 +107,9 @@
     grid-template-areas: /*setup tempalte*/ "hosting trend";
     /*justify-content: stretch;*/
   }
-  .global_hebergement :nth-child(2) {
+ /* .global_hebergement :nth-child(2) {
     grid-row: initial;
-  }
+  }*/
   .hebergement {
     background-color: #f2f2f2;
     border-radius: 10px;
