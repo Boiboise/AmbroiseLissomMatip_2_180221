@@ -9,7 +9,9 @@ body /*inheritance*/ {
   grid-template-columns: 1fr;
   grid-template-areas: /*setup tempalte*/
     "header"
+    "titre"
     "filters"
+    "information"
     "global_hebergement"
     "activity"
     "footer";
@@ -92,19 +94,23 @@ img {
 }
 
 /*************************************************filters ************************************************************************/
-/* secondary nav setting*/
-.recherche {
-  grid-area: filters;
-  margin: 0rem 1rem 1rem 1rem;
+.titre {
+  grid-area: titre;
+  margin: 0rem 1rem 0rem 1rem;
 }
-/* h1 setting : bold + normal*/
-
 h1 {
   margin-bottom: 1rem;
 }
 .titre1 {
   margin-bottom: 2rem;
 }
+
+/* secondary nav setting*/
+.recherche {
+  grid-area: filters;
+  margin: 0rem 1rem 1rem 1rem;
+}
+/* h1 setting : bold + normal*/
 
 /*searche engine implementation*/
 form {
@@ -210,6 +216,8 @@ button {
 }
 /************comment **********************/
 .information {
+  grid-area: information;
+  margin: 0rem 1rem 2rem 1rem;
   display: flex;
   align-items: center;
 }
