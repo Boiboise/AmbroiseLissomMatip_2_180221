@@ -99,6 +99,7 @@
     padding-right: 2rem; /*ajusté*/
     margin-bottom: 3rem;
     margin-top: 2rem;
+    grid-template-areas: /*setup tempalte*/ "hosting trend";
     /*justify-content: stretch;*/
   }
   .global_hebergement :nth-child(2) {
@@ -173,7 +174,7 @@
     grid-gap: 1rem;
     margin-bottom: 1rem;
   }
-  
+
   .activity__article :nth-child(1) {
     grid-row: 1/11;
     grid-column: 1;
@@ -199,22 +200,20 @@
     grid-row: 6/11;
     grid-column: 4;
   }
-  
+
   .card3 :nth-child(2) {
     grid-row: initial;
     grid-column: initial;
   }
-.act
-{
-    grid-template-rows:1fr min-content;
-}
+  .act {
+    grid-template-rows: 1fr min-content;
+  }
   .card3 h3 {
     padding-bottom: 0rem;
   }
 
- .card3 img {
+  .card3 img {
     height: 100%;
-   
   }
   /*************************************footer************************************/
   footer {
